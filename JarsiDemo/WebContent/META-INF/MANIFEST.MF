@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Class-Path: OCE_API_Testing.jar
+
