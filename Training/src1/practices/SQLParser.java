@@ -24,10 +24,8 @@ public class SQLParser {
 			}
 		}
 
-		// System.out.println(noofrows+","+noofconditions);
-		// String [] header=new String[noofrows];
 		String input1 = br.readLine();
-		// System.out.println(input1.length());
+
 		String input2 = null;
 		String[] header = input1.split(",");
 		String[][] rows = new String[noofrows][header.length];
@@ -35,7 +33,7 @@ public class SQLParser {
 		{
 			input2 = br.readLine();
 			String sliparr[] = input2.split(",");
-			//System.out.println(sliparr.length);
+
 			for (int ii = 0; ii < sliparr.length; ii++) 
 			{
 				rows[i][ii] = sliparr[ii];
@@ -48,9 +46,19 @@ public class SQLParser {
 
 		}
 		HashMap<String,String> condition=new HashMap<String, String>();
-		String cond []=conditions[0].split(">");
+		String cond []=conditions[0].split("[<>=]");
 		System.out.println(cond[0]);
 		condition.put(cond[0], cond[1]);
 		System.out.println(""+condition.get(cond[0]));
+		
+		//solutions to find out the now of rows
+		
+		for (int i = 0; i < noofrows; i++) 
+		{
+			for(int j=0;j<header.length;j++)
+			{
+				
+			}
+		}
 	}
 }
